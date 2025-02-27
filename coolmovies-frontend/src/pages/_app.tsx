@@ -1,4 +1,6 @@
 import '../styles/globals.css';
+import { ThemeProvider } from '@mui/material/styles';
+import theme from '../theme';
 import type { AppProps } from 'next/app';
 import React, { FC, useState } from 'react';
 import { Provider as ReduxProvider } from 'react-redux';
@@ -6,6 +8,7 @@ import Head from 'next/head';
 import { createStore } from '../state';
 import { EnhancedStore } from '@reduxjs/toolkit';
 import { ApolloClient, ApolloProvider, InMemoryCache } from '@apollo/client';
+
 
 const App: FC<AppProps> = ({ Component, pageProps }) => {
   const [store, setStore] = useState<EnhancedStore | null>(null);
@@ -22,7 +25,7 @@ const App: FC<AppProps> = ({ Component, pageProps }) => {
   }, []);
   if (!store || !client) return <>{'Loading...'}</>;
   return (
-    <>
+    <ThemeProvider theme={theme}>
       <Head>
         <title>{'Coolmovies Frontend'}</title>
         <meta charSet='UTF-8' />
@@ -34,7 +37,7 @@ const App: FC<AppProps> = ({ Component, pageProps }) => {
           <Component {...pageProps} />
         </ApolloProvider>
       </ReduxProvider>
-    </>
+    </ThemeProvider>
   );
 };
 
