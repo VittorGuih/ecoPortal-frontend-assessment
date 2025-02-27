@@ -18,7 +18,6 @@ import { FetchButton } from '../components/FetchButton';
 const primary = '#94c999';
 
 const Example = () => {
-  const router = useRouter();
   const dispatch = useAppDispatch();
   const exampleState = useAppSelector((state) => state.example);
 
@@ -27,10 +26,10 @@ const Example = () => {
   });
   return (
     <div css={styles.root}>
-      <Paper elevation={3} css={styles.navBar}>
+      <Paper elevation={3} css={styles.navBar} style={{display: 'flex', justifyContent: 'space-between'}}>
         <Typography>{'EcoPortal'}</Typography>
         <Link href="/reviews">
-          <Button>
+          <Button variant="contained" color="inherit">
             {'Reviews'}
           </Button>
         </Link>
