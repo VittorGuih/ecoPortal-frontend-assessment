@@ -1,4 +1,4 @@
-# CoolMovies Web Challenge
+# CoolMovies Frontend Challenge
 
 ## 📝 Challenge Overview
 
