@@ -14,7 +14,7 @@ interface AddReviewDialogProps {
 
 export const AddReviewDialog = ({ open, onClose, onSubmit, review, onReviewChange }: AddReviewDialogProps) => (
   <Dialog open={open} onClose={onClose}>
-    <DialogTitle>Add Review</DialogTitle>
+    <DialogTitle>Leave a Review</DialogTitle>
     <DialogContent>
       <TextField 
         autoFocus 
