@@ -35,7 +35,7 @@ interface MovieCardProps {
 
 export const MovieCard = ({ id, title, imgUrl, releaseDate, directorName, creatorName, rating }: MovieCardProps) => {
   return (
-    <Link href={`/review/${id}`} passHref legacyBehavior>
+    <Link href={`/reviews/${id}`} passHref legacyBehavior>
       <StyledCard>
         <StyledCardMedia>
           <StyledImage src={imgUrl || ""} alt={`${title} poster`} layout="fill" />
