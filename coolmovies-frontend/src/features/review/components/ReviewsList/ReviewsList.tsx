@@ -26,7 +26,7 @@ export const ReviewsList = ({ reviews, onAddReview }: ReviewsListProps) => (
         startIcon={<AddIcon />} 
         onClick={onAddReview}
       >
-        Add Review
+        Add New Review
       </Button>
     </Box>
     <List>
