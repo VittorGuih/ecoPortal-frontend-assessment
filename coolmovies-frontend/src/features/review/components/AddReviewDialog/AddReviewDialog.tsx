@@ -31,7 +31,7 @@ export const AddReviewDialog = ({ open, onClose, onSubmit, review, onReviewChang
         <Rating 
           name="review-rating" 
           value={review.rating} 
-          onChange={(_: any, value: number) => onReviewChange('rating', value || 0)} 
+          onChange={(_: React.SyntheticEvent, value: number | null) => onReviewChange('rating', value || 0)} 
           precision={1} 
         />
       </Box>
