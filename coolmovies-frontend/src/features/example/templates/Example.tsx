@@ -29,9 +29,9 @@ const Example = () => {
     <div css={styles.root}>
       <Paper elevation={3} css={styles.navBar}>
         <Typography>{'EcoPortal'}</Typography>
-        <Link href="/review">
+        <Link href="/reviews">
           <Button>
-            {'Review'}
+            {'Reviews'}
           </Button>
         </Link>
       </Paper>
