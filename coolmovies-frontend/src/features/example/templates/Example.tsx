@@ -7,15 +7,18 @@ import {
   Typography,
   Zoom,
 } from '@mui/material';
+import { useRouter } from 'next/router';
+import Link from 'next/link';
 import { useAppDispatch, useAppSelector } from '../../../state';
 import { exampleActions } from '../state';
 import { memo } from 'react';
 import { useCurrentUserLazyQuery } from '../../../generated/graphql';
 import { FetchButton } from '../components/FetchButton';
 
-const primary = '#1976d2';
+const primary = '#94c999';
 
 const Example = () => {
+  const router = useRouter();
   const dispatch = useAppDispatch();
   const exampleState = useAppSelector((state) => state.example);
 
@@ -26,6 +29,11 @@ const Example = () => {
     <div css={styles.root}>
       <Paper elevation={3} css={styles.navBar}>
         <Typography>{'EcoPortal'}</Typography>
+        <Link href="/review">
+          <Button>
+            {'Review'}
+          </Button>
+        </Link>
       </Paper>
 
       <div css={styles.body}>
